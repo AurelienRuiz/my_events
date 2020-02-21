@@ -1,38 +1,37 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import config from '../config.json';
+import config from '../../config.json';
 
-class Events extends Component {
+class Category extends Component {
     constructor(props) {
         super(props);
         this.state = {
             error: false,
             isLoaded: false,
-            contents: []
+            category: []
         }
     }
-    
+
     componentDidMount() {
-        axios.get(`${config.server}home`)
+        axios.get(`${config.server}category`)
         .then(response => {
-            this.setState({"contents": response.data.events.event, "isLoaded": true});
+            this.setState({"category": response.data.category, "isLoaded": true});
         })
     }
-
     render(){
-        const { error, isLoaded, contents } = this.state;
+        const { error, isLoaded, category } = this.state;
         if (error) {
             return <div>Erreur : {error.message}</div>;
         } else if (!isLoaded) {
             return <div>Chargement…</div>;
         } else {
-            console.log(contents)
+            console.log(category)
             return(
                 <div>
                     <ul>
-                        {contents.map(events => {
-                        return <li key={events.title}>
-                            {events.title}
+                        {category.map(category => {
+                        return <li key={category.name}>
+                            {category.name}
                         </li>
                         })}
                     </ul>
@@ -42,4 +41,4 @@ class Events extends Component {
     }
 }
 
-export default Events;
+export default Category;

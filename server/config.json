@@ -3,7 +3,7 @@
         "host": "localhost",
         "port": "5000",
         "api": {
-            "eventfull": {
+            "eventful": {
                 "host": "http://api.eventful.com/json/",
                 "key": "GHVk7zVSZn2d3gF6"
             }

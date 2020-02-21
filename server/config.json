@@ -5,7 +5,7 @@
         "api": {
             "eventful": {
                 "host": "http://api.eventful.com/json/",
-                "key": "GHVk7zVSZn2d3gF6"
+                "key": "app_key=GHVk7zVSZn2d3gF6"
             }
         }
     }

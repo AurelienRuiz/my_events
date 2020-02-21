@@ -13,11 +13,18 @@ app.get("/", (req, res) => {
 });
 
 app.get("/home", (req, res) => {
-    axios.get(`${config.api.eventful.host}events/search?app_key=${config.api.eventful.key}&location=Nantes,France`)
+    axios.get(`${config.api.eventful.host}events/search?${config.api.eventful.key}&location=Nantes,France`)
     .then(response => {
         res.json(response.data);
     })
 });
+
+app.get("/category", (req, res) => {
+    axios.get(`${config.api.eventful.host}categories/list?${config.api.eventful.key}`)
+    .then(response => {
+        res.json(response.data);
+    })
+})
 
 app.listen(config.port, _ => {
     console.log(`Server started on port : ${config.port}`)

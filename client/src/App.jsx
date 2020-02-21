@@ -4,19 +4,41 @@ import axios from "axios";
 
 
 class App extends Component{
+  constructor(props) {
+    super(props);
+    this.state = {
+      error: false,
+      isLoaded: false,
+      contents: []
+    }
+  }
 
   componentDidMount() {
     axios.get(`${config.server}home`)
     .then(response => {
-      console.log(response.data);
+      this.setState({"contents": response.data.events.event, "isLoaded": true});
     })
   }
   render(){
-    return(
-      <div className="App">
-        <h1> Hello, World! </h1>
-      </div>
-    );
+    const { error, isLoaded, contents } = this.state;
+    if (error) {
+      return <div>Erreur : {error.message}</div>;
+    } else if (!isLoaded) {
+      return <div>Chargement…</div>;
+    } else {
+      console.log(contents)
+      return(
+        <div className="App">
+          <ul>
+            {contents.map(events => {
+              return <li key={events.title}>
+                {events.title}
+              </li>
+            })}
+          </ul>
+        </div>
+      );
+    }
   }
 }
 

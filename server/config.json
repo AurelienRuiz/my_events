@@ -3,7 +3,10 @@
         "host": "localhost",
         "port": "5000",
         "api": {
-            "eventfull": "GHVk7zVSZn2d3gF6"
+            "eventfull": {
+                "host": "http://api.eventful.com/json/",
+                "key": "GHVk7zVSZn2d3gF6"
+            }
         }
     }
 }

@@ -1,6 +1,9 @@
 {
     "development": {
         "host": "localhost",
-        "port": "5000"
+        "port": "5000",
+        "api": {
+            "eventfull": "GHVk7zVSZn2d3gF6"
+        }
     }
 }

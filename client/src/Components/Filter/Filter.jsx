@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import "./Filter.css";
+import "./Filter.sass";
 
 class Filter extends Component {
     render() {
@@ -10,12 +10,8 @@ class Filter extends Component {
                     <button>search</button>
                 </div>
                 <div className="filter-icon">
-                    <div className="filter-list">
-                        <button>list</button>
-                    </div>
-                    <div className="filter-map">
-                        <button>map</button>
-                    </div>
+                    <button>list</button>
+                    <button>map</button>
                 </div>
             </div>
         );

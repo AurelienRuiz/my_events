@@ -34,7 +34,7 @@ class Events extends Component {
                         return <li key={events.title}>
                             <p>{events.title}</p>
                             <p>{events.venue_name}</p>
-                            {events.image !== null ? <img src={events.image.url}></img> : <></>}
+                            {events.image ? <img src={events.image.url}/> : <></>}
                         </li>
                         })}
                     </ul>

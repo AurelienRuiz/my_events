@@ -1,0 +1,115 @@
+$tablet: 700px
+$computer: 1200px
+
+@mixin tablet
+    @media screen and ( min-width: $tablet )
+        @content
+
+@mixin computer
+    @media screen and ( min-width: $computer )
+        @content
+
+
+.details-event-container
+    display: flex
+    margin: 0 auto
+    width: 100%
+    @include computer
+        justify-content: center
+        width: 1100px
+    & .card-detail-event
+        display: flex
+        align-items: center
+        flex-direction: column
+        margin: 5% 0
+        border-radius: 5px
+        background-color: white
+        box-shadow: 0 3px 7px -1px rgba(#000, .1)
+        width: 100%
+        padding: 10px
+        @include computer
+            padding: 15px 30px
+        & .header-card-detail-event
+            display: flex
+            width: 100%
+            justify-content: space-between
+            padding-bottom: 20px
+            flex-wrap: wrap
+            @include computer
+                flex-wrap: nowrap
+            & .header-card-left
+                display: flex
+                flex-direction: column
+                @include computer
+                    flex-direction: row
+                    width: 900px
+            & .join-event
+                display: inline-block
+                width: 50%
+                margin-top: 20px
+                @include computer
+                    margin-top: 0
+                    width: initial
+                    display: block
+                    width: initial
+            & button
+                background-color: transparent
+                border: 2px solid #fd5f0e
+                color: #fd5f0e
+                font-weight: bold
+                padding: 10px 10px
+                border-radius: 5px
+                cursor: pointer
+                margin-left: 4%
+                &:hover
+                    background-color: #fd5f0e
+                    color: white
+            & .info-detail-event
+                @include computer        
+                    margin-left: 20px
+                    line-height: 1.9
+                & .date-event
+                    margin: 15px 0
+                & p
+                    color: #938083
+                & i
+                    margin-right: 8px
+                    color: #fd5f0e
+        & .img-detail-event
+            background-image: url('/img/default.jpg')
+            background-size: cover
+            background-position: center
+            height: 150px
+            border-radius: 5px
+            width: 100%
+            margin-bottom: 10px
+            @include computer
+                margin: 0
+                width: 300px
+    & .desc-event
+        padding: 15px 0
+        & h4
+            margin-bottom: 10px
+            letter-spacing: .6px
+        & p
+            text-align: justify
+            color: #938083
+    & .map
+        position: relative
+        height: 300px
+        width: 100%
+        @include computer
+            width: 1100px    
+.no-result
+    display: flex
+    align-items: center
+    flex-direction: column
+    text-transform: uppercase;
+    font-size: 1.7em;
+    margin: 5% auto;
+    color: #ef1071
+    @include computer
+        width: 900px
+    & img
+        margin-top: 3%
+        width: 30%

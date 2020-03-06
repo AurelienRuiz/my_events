@@ -1,0 +1,42 @@
+$tablet: 700px
+$computer: 1200px
+
+@mixin tablet
+    @media screen and ( min-width: $tablet )
+        @content
+
+@mixin computer
+    @media screen and ( min-width: $computer )
+        @content
+        
+.footer
+    height: 200px
+    background-color: black
+    color: white
+.footer-content
+    display: flex
+    justify-content: center
+    text-align: center
+    margin: 0 auto
+    padding: 30px
+    @include computer
+        width: 1100px
+.icons-footer
+    display: flex
+    justify-content: center
+    margin: 0 auto
+    @include computer
+        width: 1400px
+    & a
+        color: white
+        font-size: 2em
+        margin: 0 2%
+        cursor: pointer
+        &:hover
+            color: #f6383e
+.copyright
+    text-align: center
+    color: white
+    background-color: black
+    padding: 2% 0 1% 0
+    font-style: italic

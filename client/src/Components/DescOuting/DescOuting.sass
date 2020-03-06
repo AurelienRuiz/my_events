@@ -1,0 +1,145 @@
+$tablet: 700px
+$computer: 1200px
+
+@mixin tablet
+    @media screen and ( min-width: $tablet )
+        @content
+
+@mixin computer
+    @media screen and ( min-width: $computer )
+        @content
+        
+.desc-outing-container
+    display: flex
+    margin: 0 auto
+    @include computer
+        justify-content: center
+        width: 1100px
+    & .desc-outing-card
+        display: flex
+        flex-direction: column
+        border-radius: 5px
+        background-color: white
+        box-shadow: 0 3px 7px -1px rgba(#000, .1)
+        padding: 10px
+        @include computer
+            margin: 5% 0
+            padding: 15px 30px
+        
+        & .header-card-outing
+            @include computer
+                display: flex
+                justify-content: space-between
+            & i
+                color: #fd5f0e
+                margin: 0 1%
+            & .header-card-left
+                flex: 1
+        & .leave-outing
+            width: 70%
+            margin: 10px auto
+            @include computer
+                margin: 0
+                width: initial
+        & button
+            background-color: transparent
+            border: 2px solid #fd5f0e
+            color: #fd5f0e
+            font-weight: bold
+            border-radius: 5px
+            cursor: pointer
+            padding: 5px
+            width: 100%
+            @include computer
+                width: auto
+                padding: 10px 10px
+                width: initial
+                margin-left: 4%
+            &:hover
+                background-color: #fd5f0e
+                color: white
+    & .map
+        position: relative
+        height: 300px
+        margin: 3% 0
+        @include computer
+            width: 1100px
+    & .card-outing-body
+        display: flex
+        margin: 3% 0
+        flex-wrap: wrap
+        @include computer
+            height: 500px
+            flex-wrap: nowrap
+        & .all-participant
+            display: flex
+            flex-wrap: wrap
+            align-content: baseline
+            flex: 30%
+            border-radius: 5px
+            box-shadow: 0 3px 7px -1px rgba(#000, .5)
+            padding: 10px
+            & .participant
+                width: 50%
+                position: relative
+                text-align: center
+                padding: 10px
+                margin-top: 20px
+                cursor: pointer
+                & i
+                    position: absolute
+                    top: -10px
+                    left: 42%
+                    margin: 0 auto
+                & img
+                    width: 75px
+                    border-radius: 100px
+        & .chat
+            flex: 70%
+            border-radius: 5px
+            box-shadow: 0 3px 7px -1px rgba(#000, .5)
+            padding: 10px
+            margin-top: 20px
+            @include computer
+                margin-top: 0
+                margin-left: 3%
+            &_container
+                height: 440px
+                overflow-y: scroll
+            .clear
+                clear: both
+            &_message
+                display: flex
+                align-items: center
+                margin: 10px 0px
+                margin-right: 100px
+                word-wrap: anywhere
+                & p
+                    border-radius: 20px
+                    background-color: #F5F5F5
+                    padding: 10px
+                &_right
+                    display: flex
+                    align-items: center
+                    margin: 10px 0px
+                    float: right
+                    margin-left: 100px
+                    word-wrap: anywhere
+                    & .chat_picture
+                        order: 2
+                    & p
+                        border-radius: 20px
+                        background-color: #42C8F2
+                        padding: 10px
+            &_picture
+                width: 50px
+                height: 50px
+                margin: 0px 10px
+                border-radius: 50%
+            &_form
+                display: flex
+                & input
+                    flex: 1
+                    padding: 10px
+                & button 
+                    margin: 0

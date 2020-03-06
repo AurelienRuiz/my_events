@@ -1,0 +1,18 @@
+$tablet: 700px
+$computer: 1200px
+
+@mixin tablet
+    @media screen and ( min-width: $tablet )
+        @content
+
+@mixin computer
+    @media screen and ( min-width: $computer )
+        @content
+
+
+.slider-img
+    display: none
+    @include computer
+        display: block
+        width: 1600px
+        margin: 3% auto

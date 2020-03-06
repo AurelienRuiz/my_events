@@ -1,0 +1,105 @@
+$tablet: 700px
+$computer: 1200px
+
+@mixin tablet
+    @media screen and ( min-width: $tablet )
+        @content
+
+@mixin computer
+    @media screen and ( min-width: $computer )
+        @content
+        
+.nav-bar-container
+    display: flex
+    justify-content: space-around
+    background: #ee0979;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ff6a00, #ee0979);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ff6a00, #ee0979); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    box-shadow: 0px 5px 20px -5px black
+    flex-wrap: wrap
+    @include computer
+        flex-wrap: nowrap
+    & .search-members
+        display: flex
+        align-items: center
+        flex-wrap: wrap
+        margin: 10px
+        margin-bottom: 20px
+        @include computer
+            margin: 0
+            flex-wrap: nowrap
+            position: absolute
+            margin-top: 103px
+        & input
+            border: none
+            border-radius: 5px 0 0 5px
+            padding: 5px
+            box-shadow: 0px 5px 10px -5px black
+            @include computer
+                box-shadow: 0px 5px 20px -5px black
+                border-radius: 10px 0 0 10px
+                width: 400px
+                padding: 15px 20px  
+        & button
+            border: none
+            background: black
+            color: white
+            border-radius: 0 5px 5px 0
+            cursor: pointer
+            padding: 5px 10px
+            @include computer
+                padding: 15px 20px
+                border-radius: 0 10px 10px 0
+.nav-bar-profil
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-wrap: wrap
+    text-align: center
+    @include computer
+        text-align: left
+        flex-wrap: nowrap
+    & .nav-bar-update-profil
+        margin-left: 10px
+        color: white
+        & a 
+            text-decoration: none
+            color: white
+            text-decoration: underline
+            font-size: .8em
+            cursor: pointer
+        & p
+            font-weight: bold
+            cursor: pointer
+    & .disconnect
+        width: 100%
+        margin: 10px
+        @include computer
+            margin: 0
+            width: auto
+            margin-left: 40px
+        & button
+            background-color: transparent
+            color: white
+            font-weight: bold
+            padding: 9px 20px
+            border-radius: 7px
+            border: 0
+            text-decoration: underline
+            @include computer
+                text-decoration: none
+                border: 2px solid white
+
+        & button:hover
+            background-color: rgba(255, 255, 255, .8)
+            color: #ee0979
+            cursor: pointer
+    & img
+        border-radius: 30px
+        width: 50px
+        cursor: pointer
+.nav-bar-logo
+    padding: 10px
+    cursor: pointer
+    & img
+        width: 100%

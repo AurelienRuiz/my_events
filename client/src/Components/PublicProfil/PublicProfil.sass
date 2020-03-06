@@ -1,0 +1,114 @@
+$tablet: 700px
+$computer: 1200px
+
+@mixin tablet
+    @media screen and ( min-width: $tablet )
+        @content
+
+@mixin computer
+    @media screen and ( min-width: $computer )
+        @content
+
+.public-profil-container
+    display: flex
+    margin: 0 auto
+    @include computer
+        justify-content: center
+        width: 1100px
+    & .card-public-profil
+        display: flex
+        align-items: center
+        flex-direction: column
+        border-radius: 5px
+        background-color: white
+        box-shadow: 0 3px 7px -1px rgba(#000, .1)
+        padding: 10px
+        @include computer
+            width: 700px
+            margin: 5% 0
+            padding: 15px 30px
+        & .card-header-public-profil
+            display: flex
+            flex: 1
+            @include computer
+                width: 650px
+            & .avatar-profil-public img
+                border-radius: 70px
+                width: 60px
+                @include computer
+                    width: 100px
+            & .info-user-profil-public
+                margin-left: 20px
+                line-height: 2
+        & .card-body-profil-public
+            display: flex
+            flex-wrap: wrap
+            flex-direction: column
+            margin-top: 10%
+            borrder-top: 2px solid black
+            @include computer
+                width: 650px
+            & h2
+                margin-bottom: 5%
+                text-align: center
+                color: #f0136c
+                letter-spacing: 1.2
+            & .sortie
+                display: flex
+                flex-direction: column
+                border-radius: 5px
+                background-color: white
+                box-shadow: 0 3px 7px -1px rgba(#000, .5)
+                margin: 10px
+                padding: 10px
+                @include computer
+                    flex-direction: row
+                    margin: 2% 0
+                    padding: 15px 30px
+                
+                & .info-sortie
+                    display: flex
+                    flex: 60%
+                    & .title-nbr
+                        margin-left: 3%
+                        display: flex
+                        flex-direction: column
+                        justify-content: space-around
+                    & img
+                        width: 70px
+                & .right
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    @include computer
+                        justify-content: initial
+                    flex: 1
+                    & button
+                        background-color: transparent
+                        border: 2px solid #fd5f0e
+                        color: #fd5f0e
+                        font-weight: bold
+                        padding: 8px 10px
+                        border-radius: 5px
+                        cursor: pointer
+                        margin-top: 20px
+                        @include computer
+                            margin-left: 4%
+                            margin-top: 0
+                        &:hover
+                            background-color: #fd5f0e
+                            color: white
+.no-result
+    display: flex
+    align-items: center
+    flex-direction: column
+    text-transform: uppercase;
+    font-size: 1em;
+    margin: 5% auto;
+    color: #ef1071
+    width: 100%
+    @include computer
+        width: 600px
+    & img
+        width: 60%
+        margin-top: 3%

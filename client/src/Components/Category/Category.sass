@@ -1,0 +1,80 @@
+$tablet: 700px
+$computer: 1200px
+
+@mixin tablet
+    @media screen and ( min-width: $tablet )
+        @content
+
+@mixin computer
+    @media screen and ( min-width: $computer )
+        @content
+
+.container-category
+    display: none
+    @include computer
+        display: block
+.title-category
+    font-family: 'Pacifico'
+    text-align: center
+    margin: 5% 0 0 0
+    font-size: 1.6em
+    letter-spacing: .1em
+    color: #f6393d
+
+.container-cards-category
+    display: flex
+    flex-wrap: wrap
+    width: 1100px
+    margin: 3% auto 1% auto
+    
+.cards-category
+    flex: 25%
+    height: 180px
+    border-radius: 7px
+    margin: 1% 0.5%
+    text-align: center
+    color: white
+    cursor: pointer
+    font-weight: bold
+    overflow: hidden
+    &:hover
+        font-size: 1.2em
+    & h4
+        display: flex
+        justify-content: center
+        align-items: center
+        background-color: rgba(0, 0, 0, .3)
+        width: 100%
+        height: 100%
+        letter-spacing: 1.2px
+        font-size: 1.2em
+.sport
+    background-image: url('/img/category/sports.jpg')
+    background-size: cover
+    background-repeat: no-repeat
+    background-position: center
+.arts
+    background-image: url('/img/category/arts.jpg')
+    background-size: cover
+    background-repeat: no-repeat
+    background-position: center
+.comedy
+    background-image: url('/img/category/comedy.jpg')
+    background-size: cover
+    background-repeat: no-repeat
+    background-position: center
+.concert
+    background-image: url('/img/category/concert.jpg')
+    background-size: cover
+    background-repeat: no-repeat
+    background-position: center
+.night
+    background-image: url('/img/category/night.jpg')
+    background-size: cover
+    background-repeat: no-repeat
+    background-position: center
+.festival
+    background-image: url('/img/category/festivals.jpg')
+    background-size: cover
+    background-repeat: no-repeat
+    background-position: center

@@ -1,0 +1,24 @@
+.informative_message
+    &_close
+        display: none
+
+@mixin informative-message($bg, $border)
+    background-color: $bg
+    padding: 5px 10px
+    text-align: center
+    transition-duration: 0.3
+    width: 100%
+
+.success
+    @include informative-message(#AAFEAB,#80EA81)
+
+.information
+    @include informative-message(#A6EAF7,#80DAEA)
+
+.warning
+    @include informative-message(#F7F3A6,#E3DD66)
+
+.error
+    @include informative-message(#F09999,#E36666)
+
+    

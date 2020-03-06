@@ -1,0 +1,138 @@
+$tablet: 700px
+$computer: 1200px
+
+@mixin tablet
+    @media screen and ( min-width: $tablet )
+        @content
+
+@mixin computer
+    @media screen and ( min-width: $computer )
+        @content
+
+.pagination
+  display: flex
+  justify-content: center
+  margin: 3% auto
+  user-select: none
+  & li 
+    list-style-type: none
+    padding: 8px 10px
+    font-size: 1.2em
+    & a
+      color: #797979
+      text-decoration: none
+      &:hover
+        color: #F01569
+  .active a
+    color: #f01569
+
+
+.no-result
+  display: flex
+  align-items: center
+  flex-direction: column
+  width: 900px
+  text-transform: uppercase
+  font-size: 1.7em
+  margin: 5% auto
+  color: #ef1071
+  & img
+    margin-top: 3%
+.container-home
+    display: flex
+    justify-content: center
+    margin-top: 5%
+    margin: 0 auto
+    @include computer
+      width: 1400px
+.events-container
+    display: flex
+    flex-wrap: wrap
+    @include computer
+      width: 1400px
+.events-card
+  display: flex
+  flex-direction: column
+  margin: 1rem auto
+  box-shadow: 0 3px 7px -1px rgba(#000, .1)
+  margin-bottom: 1.6%
+  background: white
+  line-height: 1.4
+  font-family: sans-serif
+  border-radius: 5px
+  overflow: hidden
+  z-index: 0
+  cursor: pointer
+  transition: 0.3s
+  width: 90%
+  @include computer
+    width: 45%
+  &:hover
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  .meta
+    position: relative
+    z-index: 0
+    height: 200px
+    & .photo
+      background-image: url("/img/default.jpg")
+      position: absolute
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0
+      background-size: cover
+      background-position: center
+  .description
+    padding: 1rem
+    background: white
+    position: relative
+    z-index: 1
+    i
+      margin-right: 8px
+      color: #fd5e0f
+    h1
+      line-height: 1
+      margin: 0
+      font-size: 1.6rem
+    h2
+      font-size: 1rem
+      font-weight: 300
+      text-transform: uppercase
+      color: grey
+      margin-top: 5px
+    .read-more
+      text-align: right
+      a
+        color: #fd5e0f
+        display: inline-block
+        position: relative
+        &:hover
+          color: #ef1071
+
+  @media (min-width: 640px)
+    flex-direction: row
+    max-width: 600px
+    .meta
+      flex-basis: 40%
+      height: auto
+    .description
+      flex-basis: 60%
+      &:before
+        transform: skewX(-3deg)
+        content: ""
+        background: #fff
+        width: 30px
+        position: absolute
+        left: -10px
+        top: 0
+        bottom: 0
+        z-index: -1
+    &.alt
+      flex-direction: row-reverse
+      .description
+        &:before
+          left: inherit
+          right: -10px
+          transform: skew(3deg)
+      .details
+        padding-left: 25px

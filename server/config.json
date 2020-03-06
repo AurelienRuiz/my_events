@@ -1,0 +1,29 @@
+{
+    "development": {
+        "host": "localhost",
+        "port": "5000",
+        "api": {
+            "eventful": {
+                "host": "http://api.eventful.com/json/",
+                "key": "app_key=GHVk7zVSZn2d3gF6"
+            },
+            "locationIQ": {
+                "host": "https://eu1.locationiq.com/v1/",
+                "key": "key=80cd47026f93eb&format=json"
+            }
+        },
+        "database": {
+            "alexis": {
+                "login": "alexis",
+                "password": "IYBTebiHQHoH31Vh"
+            },
+            "aurelien": {
+                "login": "aurelien",
+                "password": "IF089fuF0w3mdWak"
+            }
+        },
+        "socket" : {
+            "port": 5001
+        }
+    }
+}

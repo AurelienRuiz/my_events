@@ -1,0 +1,32 @@
+.outing-event
+    width: 100%
+    & .outing-public
+        display: flex
+        flex-wrap: wrap
+        & .sortie
+            width: 26%
+            display: flex
+            justify-content: space-around
+            margin: 3% auto
+            padding: 10px 0
+            border-radius: 5px
+            box-shadow: 0 3px 7px -1px rgba(#000, .5)
+            & .sortie-user-part
+                text-align: center
+                & .img-sortie-profil img
+                    width: 75px
+                    border-radius: 100px
+            & .join-sortie
+                display: flex
+                align-items: center
+                & button
+                    background: none
+                    border: 2px solid #fe6407
+                    border-radius: 5px
+                    color: #fe6407
+                    padding: 8px
+                    cursor: pointer
+                    font-weight: bold
+                    &:hover
+                        background-color: #fd5f0e
+                        color: white

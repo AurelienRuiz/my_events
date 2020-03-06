@@ -1,0 +1,45 @@
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+.login-container
+    background-image: url('/img/background.jpg')
+    background-color: rgba(0, 0, 0, 1)
+    background-size: cover
+    background-repeat: no-repeat
+    background-position: center
+    height: 100vh
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: end
+    & img
+        width: 13%
+        vertical-align: middle
+        margin-bottom: 300px
+.facebook-button
+    display: flex
+    justify-content: center
+    align-items: center
+    background-color: #4267b2
+    border: none
+    color: white
+    font-weight: bold
+    text-transform: uppercase
+    border-radius: 5px
+    margin-bottom: 100px
+    width: 240px
+    font-size: .8em
+    padding: 15px 0
+    cursor: pointer
+    & i
+        font-size: 2em
+        margin-right: 5%
+        &:hover
+            color: #4267b2
+    &:hover
+        background-color: white
+        color: #4267b2
+    &:outline
+        none

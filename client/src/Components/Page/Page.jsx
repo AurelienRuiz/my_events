@@ -34,7 +34,7 @@ class Page extends Component {
         if(this.state.show) {
             var modal = <UpdateProfil userInfo={this.props.userInfo} modal={this.state.show} modal={() => this.closeModal()} setUserInfo={this.props.setUserInfo}/>
         }
-        var page = <Loading />
+        var page = <div></div>
         switch(this.props.currentPage)
         {
             case "home":
@@ -48,6 +48,9 @@ class Page extends Component {
                 break;
             case "publicProfil":
                 page = <PublicProfil id={this.props.idEvents} changePage={ this.props.changePage }/>
+                break;
+            default:
+                page = <div className="height"><Loading /></div>
         }
         return (
             <React.Fragment>

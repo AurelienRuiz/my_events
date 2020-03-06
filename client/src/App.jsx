@@ -75,7 +75,7 @@ class App extends Component{
           component = <Page userInfo={ this.state.userInfo } setUserInfo={ this.setUserInfo } changePage={ this.setCurrentPage } currentPage={this.state.currentPage} idEvents={this.state.IdEvent}/>
         break;
       default:
-          component = <Loading />
+          component = <div className="height"><Loading /></div>
     }
       return(
         <div className="App">

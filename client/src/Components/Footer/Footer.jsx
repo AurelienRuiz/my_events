@@ -14,7 +14,7 @@ class Footer extends Component {
                     <a href="https://www.instagram.com/mooveet_nantes/" target="_blank"><i className="fab fa-instagram"></i></a>
                 </div>
                 <div className="copyright">
-                    <p>&copy; 2020 Created by Alexis Allais & Aurélien Ruiz-Minano</p>
+                    <p>&copy; 2020 Created by <a href="https://alexisallais.fr/" target="_blank">Alexis Allais</a> & <a href="https://aurelienruizminano.fr/" target="_blank">Aurélien Ruiz-Minano</a></p>
                 </div>
             </div>
         );

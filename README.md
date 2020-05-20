@@ -17,10 +17,10 @@ Features
   
 Installation
 
-  Télécharger les fichiers
-  Ouvrez un terminal
-  Dans le dossier "server" lancez npm install puis npm start
-  Dans le dossier "client" lancez npm install puis npm start
+  - Télécharger les fichiers
+  - Ouvrez un terminal
+  - Dans le dossier "server" lancez npm install puis npm start
+  - Dans le dossier "client" lancez npm install puis npm start
   
 Technologies
 
